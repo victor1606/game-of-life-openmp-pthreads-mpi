@@ -1,34 +1,24 @@
 # Conway's Game of Life
 
-## Descriere
+## Description
 
-Conway's Game of Life este un automat celular, un "joc" cu 0 jucatori care se desfasoara pe o grila patrata bidimensionala. Celulele de pe grila pot avea valoarea 1 (vie) sau 0 (moarta) si evolueaza conform urmatoarelor reguli:
+Conway's Game of Life is a cellular automaton, a "game" with 0 players that unfolds on a two-dimensional square grid. The cells on the grid can have a value of 1 (alive) or 0 (dead) and evolve according to the following rules:
 
-- o celula vie cu mai putin de doi vecini vii moare.
-- o celula vie cu mai mult de trei vecini vii moare.
-- o celula vie cu doi sau trei vecini vii supravietuieste, nemodificata, in generatia urmatoare.
-- o celula moarta cu exact trei vecini vii devine vie.
-
-Configuratia initiala a celulelor poate fi creata de un om, dar toate generatiile ulterioare sunt complet determinate de regulile de mai sus. Scopul jocului este sa gasesti modele care evolueaza in moduri interesante.
-
-## Echipa proiectului:
-- Calugaritoiu Ion-Victor 342C1
-- Rizea Adelina-Maria 342C1
-- Popescu Ioana-Denisa 342C1
-
-## Numele asistentului:
-Ouatu Andrei-Catalin
+A live cell with fewer than two live neighbors dies.
+A live cell with more than three live neighbors dies.
+A live cell with two or three live neighbors survives, unchanged, in the next generation.
+A dead cell with exactly three live neighbors becomes alive.
+The initial configuration of cells can be created by a human, but all subsequent generations are entirely determined by the rules above. The goal of the game is to find patterns that evolve in interesting ways.
 
 ## Usage
-Pentru a genera o tabla initiala: <br>
-    python3 ./in/gen_test.py [width] [height]
+To generate an initial grid: <br>
+    ```python3 ./in/gen_test.py [width] [height]```
 
-Pentru compilare & rulare: <br>
-    make <br>
-    make run_large (500x500 test)<br>
+For compilation and execution: <br>
+    `make`<br>
+    `make run_large (500x500 test)`<br>
     OR <br>
-    make run_small (10x10 test)
+    `make run_small (10x10 test)`
 
-Pentru testare timpi rulare + corectitudine algoritmi:<br>
-    ./test.sh [small/large]
-
+For testing runtime performance and algorithm correctness: <br>
+    `./test.sh [small/large]`
